@@ -19,9 +19,9 @@ CREATE TABLE platforme (
 
 CREATE TABLE film (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    titre VARCHAR(255) NOT NULL,
-    description TEXT,
-    annee INT,
+    title VARCHAR(255) NOT NULL,
+    synopsis TEXT,
+    release_year INT,
     type_media VARCHAR(50),
     platforme_id INT,
     FOREIGN KEY (platforme_id) REFERENCES platforme(id)
@@ -57,7 +57,7 @@ INSERT INTO platforme (nom) VALUES
 ('Apple TV+');
 
 -- Insertion des films
-INSERT INTO film (titre, description, annee, type_media, platforme_id) VALUES
+INSERT INTO film (title, synopsis, release_year, type_media, platforme_id) VALUES
 ('Inception', 'A mind-bending thriller', 2010, 'FILM', 1),
 ('The Mandalorian', 'A Star Wars series', 2019, 'SERIE', 3),
 ('The Boys', 'Superheroes gone bad', 2019, 'SERIE', 2),
