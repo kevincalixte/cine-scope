@@ -37,16 +37,16 @@ CREATE TABLE film_platforme (
 
 -- Insertion des utilisateurs
 INSERT INTO user (email, roles, password) VALUES
-('alice@example.com', '["ROLE_USER"]', '$2y$10$abcdefghijklmno1'),
-('bob@example.com', '["ROLE_USER"]', '$2y$10$abcdefghijklmno2'),
-('carol@example.com', '["ROLE_USER"]', '$2y$10$abcdefghijklmno3'),
-('dave@example.com', '["ROLE_USER"]', '$2y$10$abcdefghijklmno4'),
-('eve@example.com', '["ROLE_USER"]', '$2y$10$abcdefghijklmno5'),
-('frank@example.com', '["ROLE_USER"]', '$2y$10$abcdefghijklmno6'),
-('grace@example.com', '["ROLE_USER"]', '$2y$10$abcdefghijklmno7'),
-('heidi@example.com', '["ROLE_USER"]', '$2y$10$abcdefghijklmno8'),
-('ivan@example.com', '["ROLE_USER"]', '$2y$10$abcdefghijklmno9'),
-('judy@example.com', '["ROLE_USER"]', '$2y$10$abcdefghijklmnoA');
+('alice@example.com', '["ROLE_USER"]', '$2y$10$QWERTYUIOPASDFGHJKLZXCVBNM123456'),
+('bob@example.com', '["ROLE_USER"]', '$2y$10$QWERTYUIOPASDFGHJKLZXCVBNM123456'),
+('carol@example.com', '["ROLE_USER"]', '$2y$10$QWERTYUIOPASDFGHJKLZXCVBNM123456'),
+('dave@example.com', '["ROLE_USER"]', '$2y$10$QWERTYUIOPASDFGHJKLZXCVBNM123456'),
+('eve@example.com', '["ROLE_USER"]', '$2y$10$QWERTYUIOPASDFGHJKLZXCVBNM123456'),
+('frank@example.com', '["ROLE_USER"]', '$2y$10$QWERTYUIOPASDFGHJKLZXCVBNM123456'),
+('grace@example.com', '["ROLE_USER"]', '$2y$10$QWERTYUIOPASDFGHJKLZXCVBNM123456'),
+('heidi@example.com', '["ROLE_USER"]', '$2y$10$QWERTYUIOPASDFGHJKLZXCVBNM123456'),
+('ivan@example.com', '["ROLE_USER"]', '$2y$10$QWERTYUIOPASDFGHJKLZXCVBNM123456'),
+('judy@example.com', '["ROLE_USER"]', '$2y$10$QWERTYUIOPASDFGHJKLZXCVBNM123456');
 
 -- Insertion des plateformes
 INSERT INTO platforme (nom) VALUES
@@ -73,3 +73,6 @@ INSERT INTO film (title, synopsis, release_year, type_media, platforme_id) VALUE
 INSERT INTO film_platforme (film_id, platforme_id) VALUES
 (1, 1), (2, 3), (3, 2), (4, 4), (5, 5),
 (6, 1), (7, 1), (8, 2), (9, 3), (10, 4);
+
+ALTER TABLE user ADD avatar VARCHAR(255) DEFAULT NULL;
+
