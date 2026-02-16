@@ -9,11 +9,10 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class PlatformeController extends AbstractController
 {
-    #[Route('/platformes', name: 'app_platforme')]
+    #[Route('/platforme', name: 'app_platforme')]
     public function index(PlatformeRepository $pr): Response
     {
         $platformes = $pr->findAll();
-        dd($platformes);
         return $this->render('platforme/index.html.twig', [
             'controller_name' => 'PlatformeController',
         ]);
